@@ -1,4 +1,4 @@
-package com.xr.principle.pattern.proxy;
+package com.xr.principle.pattern.proxy.jdk_proxy;
 
 /**
  * 卖票接口

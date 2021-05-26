@@ -1,7 +1,5 @@
 package com.xr.principle.pattern.proxy.jdk_proxy;
 
-import com.xr.principle.pattern.proxy.SellTickets;
-
 /**
  * 测试类
  *

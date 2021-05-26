@@ -1,6 +1,6 @@
 package com.xr.principle.pattern.proxy.jdk_proxy;
 
-import com.xr.principle.pattern.proxy.SellTickets;
+import com.xr.principle.pattern.proxy.jdk_proxy.SellTickets;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -25,7 +25,7 @@ implements SellTickets {
         try {
             m1 = Class.forName("java.lang.Object").getMethod("equals", Class.forName("java.lang.Object"));
             m2 = Class.forName("java.lang.Object").getMethod("toString", new Class[0]);
-            m3 = Class.forName("com.xr.principle.pattern.proxy.SellTickets").getMethod("sell", new Class[0]);
+            m3 = Class.forName("com.xr.principle.pattern.proxy.jdk_proxy.SellTickets").getMethod("sell", new Class[0]);
             m0 = Class.forName("java.lang.Object").getMethod("hashCode", new Class[0]);
             return;
         }
