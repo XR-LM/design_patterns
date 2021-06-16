@@ -15,6 +15,7 @@ public class Client {
         FastFood food1 = new FriedRice();
 
         food1 = new Egg(food1);
+        food1 = new Bacon(food1);
 
         //花费的价格
         System.out.println(food1.getDesc() + " " + food1.cost() + "元");
