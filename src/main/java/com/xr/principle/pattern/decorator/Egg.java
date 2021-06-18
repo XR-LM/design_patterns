@@ -13,7 +13,7 @@ public class Egg extends Garnish {
 
     @Override
     public float cost() {
-        return getPrice() + getFastFood().cost();
+        return getPrice() + super.cost();
     }
 
     @Override

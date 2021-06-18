@@ -13,6 +13,11 @@ public abstract class Garnish extends FastFood {
         return fastFood;
     }
 
+    @Override
+    public float cost() {
+        return fastFood.cost();
+    }
+
     public void setFastFood(FastFood fastFood) {
         this.fastFood = fastFood;
     }
