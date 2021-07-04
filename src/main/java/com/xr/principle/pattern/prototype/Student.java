@@ -15,6 +15,13 @@ public class Student implements Cloneable, Serializable {
         return name;
     }
 
+    Student() {
+    }
+
+    public Student(String name) {
+        this.name = name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
