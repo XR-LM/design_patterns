@@ -1,4 +1,4 @@
-package com.xr.principle.pattern.memento;
+package com.xr.principle.pattern.memento.blackbox;
 
 
 /**
