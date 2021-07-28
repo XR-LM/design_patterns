@@ -5,7 +5,7 @@ public class Client {
         // 测试demo
         String shareType = "order";
         ShareStrategy shareStrategy = ShareFactory.getShareStrategy(shareType);
-        shareStrategy.shareAlgorithm("order");
+        shareStrategy.shareAlgorithm("single");
         // 输出结果：当前分享图片是order
     }
 }

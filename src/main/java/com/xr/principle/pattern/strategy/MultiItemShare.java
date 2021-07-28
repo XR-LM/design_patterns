@@ -5,6 +5,7 @@ package com.xr.principle.pattern.strategy;
  *
  * @author 零
  */
+@ShareStrategyAnnotation(type ="multi")
 public class MultiItemShare implements ShareStrategy {
 
     @Override

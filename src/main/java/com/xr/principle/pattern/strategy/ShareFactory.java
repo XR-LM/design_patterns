@@ -1,7 +1,10 @@
 package com.xr.principle.pattern.strategy;
 
+import org.reflections.Reflections;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 分享工厂
@@ -13,12 +16,17 @@ public class ShareFactory {
     /**
      * 定义策略map缓存
      */
-    private static final Map<String, ShareStrategy> shareStrategies = new HashMap<>();
+    private static final Map<String, Class<?>> shareStrategies = new HashMap<>();
+
+    private static final String STRATEGY_CLASS_PACKAGE = "com.xr.principle.pattern.strategy";
 
     static {
-        shareStrategies.put(ShareType.ORDER.getCode(), new OrderItemShare());
-        shareStrategies.put(ShareType.SINGLE.getCode(), new SingleItemShare());
-        shareStrategies.put(ShareType.MULTI.getCode(), new MultiItemShare());
+        Reflections reflections = new Reflections(STRATEGY_CLASS_PACKAGE);
+        Set<Class<?>> typesAnnotatedWith = reflections.getTypesAnnotatedWith(ShareStrategyAnnotation.class);
+        for (Class<?> aClass : typesAnnotatedWith) {
+            ShareStrategyAnnotation annotation = aClass.getAnnotation(ShareStrategyAnnotation.class);
+            shareStrategies.put(annotation.type(), aClass);
+        }
     }
 
 
@@ -26,6 +34,11 @@ public class ShareFactory {
         if (type == null || type.isEmpty()) {
             throw new IllegalArgumentException("type should not be empty.");
         }
-        return shareStrategies.get(type);
+        try {
+            return (ShareStrategy) shareStrategies.get(type).newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

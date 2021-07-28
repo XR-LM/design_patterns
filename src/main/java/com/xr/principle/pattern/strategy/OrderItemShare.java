@@ -5,6 +5,7 @@ package com.xr.principle.pattern.strategy;
  *
  * @author 零
  */
+@ShareStrategyAnnotation(type = "order")
 public class OrderItemShare implements ShareStrategy {
 
     @Override
