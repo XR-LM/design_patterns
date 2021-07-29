@@ -25,7 +25,7 @@ public class ShareFactory {
         Set<Class<?>> typesAnnotatedWith = reflections.getTypesAnnotatedWith(ShareStrategyAnnotation.class);
         for (Class<?> aClass : typesAnnotatedWith) {
             ShareStrategyAnnotation annotation = aClass.getAnnotation(ShareStrategyAnnotation.class);
-            shareStrategies.put(annotation.type(), aClass);
+            shareStrategies.put(annotation.type().getCode(), aClass);
         }
     }
 

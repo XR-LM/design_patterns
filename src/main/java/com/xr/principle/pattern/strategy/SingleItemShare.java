@@ -5,7 +5,7 @@ package com.xr.principle.pattern.strategy;
  *
  * @author 零
  */
-@ShareStrategyAnnotation(type = "single")
+@ShareStrategyAnnotation(type = ShareType.SINGLE)
 public class SingleItemShare implements ShareStrategy {
 
     @Override
