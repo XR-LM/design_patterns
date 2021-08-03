@@ -5,7 +5,7 @@ package com.xr.principle.pattern.strategy;
  *
  * @author 零
  */
-enum ShareType {
+public enum ShareType {
     SINGLE("single", "单商品"),
     MULTI("multi", "多商品"),
     ORDER("order", "下单");
