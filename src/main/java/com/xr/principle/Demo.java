@@ -3,6 +3,8 @@ package com.xr.principle;
 import java.lang.reflect.Field;
 
 public class Demo {
+
+
     public static void main(String[] args) throws IllegalAccessException {
         Class<Student> class1 = Student.class;
         Field[] declaredFields = class1.getDeclaredFields();
@@ -11,4 +13,5 @@ public class Demo {
             int anInt = declaredField.getInt(class1);
         }
     }
+
 }
