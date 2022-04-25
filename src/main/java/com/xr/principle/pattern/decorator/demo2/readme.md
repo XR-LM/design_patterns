@@ -21,3 +21,8 @@
 - EncryptionDecorator 具体装饰类(加解密类)
 - CompressionDecorator 具体装饰类(压缩解压类)
 -  Test 测试类
+
+
+写入过程：write(encode(compress(data)))
+
+读取过程：decompress(decode(read()))
