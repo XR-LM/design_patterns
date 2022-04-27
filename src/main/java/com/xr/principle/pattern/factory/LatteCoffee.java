@@ -5,9 +5,9 @@ package com.xr.principle.pattern.factory;
  *
  * @author 零
  */
-public class LatteCoffee extends Coffee {
+public class LatteCoffee implements Coffee {
     @Override
-    String getName() {
+    public String getName() {
         return "拿铁咖啡";
     }
 }

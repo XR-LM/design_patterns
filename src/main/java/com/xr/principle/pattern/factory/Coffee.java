@@ -5,10 +5,10 @@ package com.xr.principle.pattern.factory;
  *
  * @author 零
  */
-public abstract class Coffee {
+public interface Coffee {
     /**
      * 获取咖啡名
      * @return 咖啡名
      */
-    abstract String getName();
+     String getName();
 }
