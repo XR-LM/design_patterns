@@ -7,7 +7,7 @@ import java.util.Properties;
 import java.util.Set;
 
 /**
- * 咖啡工厂
+ * 通过配置文件+map创建bean对象
  *
  * @author 零
  */
